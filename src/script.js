@@ -1,7 +1,40 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//ESCREVA SEU CÓDIGO AQUI!!
+
+
+function calculadora(numero1, numero2, operador){
+
+let resultados
+let num1 = parseInt(numero1)
+let num2 = parseInt(numero2)
+
+  switch (operador){
+    case '+':
+      resultados =  num1 + num2
+      break;
+    case '-':
+      resultados = num1 - num2
+      break;
+    case '*':
+      resultados = num1 * num2
+      break;
+    case '/':
+      resultados = num1 / num2
+      break;
+    case 'e':
+      resultados = num1**num2
+      break;
+
+  
+  }
+if(resultados == undefined || resultados >= 1000000  )
+  resultados = 'ERRO'
+
+  return resultados
+
+
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,5 +59,5 @@ function calcular() {
       operador = x
   });
 
-  visor.value = Calculadora(numeros[0], numeros[1], operador)
+  visor.value = calculadora(numeros[0], numeros[1], operador)
 }
